@@ -1,0 +1,12 @@
+.app {
+  /* background-image: url('./images/happy-black.png');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: flex;
+
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}
