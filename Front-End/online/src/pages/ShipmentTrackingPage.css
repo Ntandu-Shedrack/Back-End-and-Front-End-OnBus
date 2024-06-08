@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+.ShipmentTrackingPage {
+    flex: 1; 
+    height: 100%;
+    padding: 2rem;
+    background-color: #f9fafb;
+    color: #5956d6;
+    border: 1px solid #5956d6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+.ShipmentTrackingPage input, button {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 0.5rem;
+    border: 1px solid #5956d6;
+    border-radius: 7px;
+}
+.ShipmentTrackingPage button {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+.ShipmentTrackingPage h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .ShipmentTrackingPage table {
+    width: 100%;
+    border-collapse: none;
+  }
+  
+  .ShipmentTrackingPage table tr {
+    border-bottom: 0px solid #ddd;
+  }
+  
+  .ShipmentTrackingPage table td {
+    padding: 10px;
+  }
+  
+  .ShipmentTrackingPage table td:not(:last-child) {
+    border-right: 0px solid #ddd;
+  }
+  .searchBtn {
+    /* color: #fff; */
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: medium;
+  }
