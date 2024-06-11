@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
 import { ChevronLast, ChevronFirst } from 'lucide-react';
-// import { MoreVertical } from 'lucide-react';
+import { MoreVertical } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
@@ -38,8 +38,8 @@ export default function Sidebar({ children }) {
           />
           <div className={`user-info ${expanded ? 'show' : ''}`}>
             <div className="user-details">
-              <h4 className="user-name">John Doe</h4>
-              <span className="user-email">johndoe@gmail.com</span>
+              <h4 className="user-name">Janeth Doe</h4>
+              <span className="user-email">janethdoe@gmail.com</span>
             </div>
             <MoreVertical size={20} />
           </div>

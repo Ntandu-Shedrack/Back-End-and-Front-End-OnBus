@@ -1,0 +1,47 @@
+/* .busManagement {
+    align-items: center;
+} */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem;
+    gap: 2rem;
+  }
+.form-container {
+    flex: 1; 
+    height: 100%;
+    padding: 2rem;
+    background-color: #f9fafb;
+    color: #5956d6;
+    border: 1px solid #5956d6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-container input {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 0.5rem;
+    border: 1px solid #5956d6;
+    border-radius: 7px;
+    width: calc(100% - 2rem);
+    margin: 1rem 0;
+}
+.form-container button,select {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 0.5rem;
+    border: 1px solid #5956d6;
+    border-radius: 7px;
+    width: calc(100% - 1rem);
+    margin: 1rem 0;
+    color: #5956d6;
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+}
