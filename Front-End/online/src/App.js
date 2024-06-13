@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Sidebar, { SidebarItem } from './Sidebar';
-import { Home, Settings, Bell, Info, Truck, Mail } from 'lucide-react';
+import { Home, Info, Truck, Mail } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import NotificationsPage from './pages/NotificationsPage';
@@ -17,8 +17,8 @@ function App() {
       <div className="app">
         <Sidebar>
           <SidebarItem icon={<Home />} text="Home" to="/" />
-          <SidebarItem icon={<Settings />} text="Settings" to="/pages/SettingsPage" />
-          <SidebarItem icon={<Bell />} text="Notifications" to="/pages/NotificationsPage" alert />
+          {/* <SidebarItem icon={<Settings />} text="Settings" to="/pages/SettingsPage" /> */}
+          {/* <SidebarItem icon={<Bell />} text="Notifications" to="/pages/NotificationsPage" alert /> */}
           <SidebarItem icon={<Info />} text="About Us" to="/pages/AboutUsPage" />
           <SidebarItem icon={<Truck />} text="Shipment Tracking" to="/pages/ShipmentTrackingPage" />
           <SidebarItem icon={<Mail />} text="Contact Us" to="/pages/ContactUsPage" />
