@@ -1,8 +1,16 @@
 import React from 'react';
 import './BusesPage.css';
+import { useHistory } from 'react-router-dom';
 import AirlineSeatReclineNormalOutlinedIcon from '@mui/icons-material/AirlineSeatReclineNormalOutlined';
 
-function buses() {
+function BusesPage() {
+  const history = useHistory();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    history.push('/pages/SeatLayout');
+  }
+
   return (
     <div className='container'>
     <div class="bus-card">
@@ -33,7 +41,7 @@ function buses() {
                 <AirlineSeatReclineNormalOutlinedIcon/>
                 <p>49 Seats Left</p>
             </div>
-            <button class="select-seats">Select Seats</button>
+            <button class="select-seats" onClick={handleClick}>Select Seats</button>
         </div>
         <div class="bus-footer">
             <div class="rating">
@@ -49,4 +57,4 @@ function buses() {
   )
 }
 
-export default buses;
+export default BusesPage;

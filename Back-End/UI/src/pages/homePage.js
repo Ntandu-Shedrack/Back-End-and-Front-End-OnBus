@@ -33,7 +33,6 @@ import Notification from './Notification';
 import ContactUs from './contactUs';
 import Sidebar, { SidebarItem } from './Sidebar';
 import { Home, Settings, Bell, Truck, Mail } from 'lucide-react';
-import ChartComponent from './ChartComponent'; // Import the ChartComponent
 import './homePage.css';
 
 const HomePage = () => {
@@ -52,21 +51,13 @@ const HomePage = () => {
             <Route path="/homePage" exact>
               <div>
                 <h1>Welcome to the Dashboard</h1>
-                <ChartComponent /> {/* Display the charts here */}
+                {/* <ChartComponent /> Display the charts here */}
               </div>
             </Route>
-            <Route path="/busManagement">
-              <BusManagement />
-            </Route>
-            <Route path="/notifications">
-              <Notification />
-            </Route>
-            <Route path="/shipmentsManagement">
-              <ShipmentsManagement />
-            </Route>
-            <Route path="/contactUs">
-              <ContactUs />
-            </Route>
+            <Route path="/busManagement" component={BusManagement} />
+            <Route path="/notifications" component={Notification} />
+            <Route path="/shipmentsManagement" component={ShipmentsManagement} />
+            <Route path="/contactUs" component={ContactUs} />
           </Switch>
         </main>
       </div>

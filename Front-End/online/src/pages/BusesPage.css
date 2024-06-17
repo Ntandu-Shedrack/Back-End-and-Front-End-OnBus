@@ -1,6 +1,7 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     padding: 2rem;
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #ddd;
+    border: 1px solid #5956d6;
     border-radius: 10px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -27,13 +28,13 @@
 .bus-details h3 {
     margin: 0;
     font-size: 18px;
-    color: #333;
+    color: #5956d6;
 }
 
 .bus-details p {
     margin: 2px 0;
     font-size: 14px;
-    color: #666;
+    color: #5956d6;
 }
 
 .luxury {
@@ -41,7 +42,7 @@
 }
 
 .via {
-    color: red;
+    color: #5956d6;
 }
 
 .bus-timing {
@@ -54,7 +55,7 @@
 .bus-timing p {
     margin: 5px 0;
     font-size: 16px;
-    color: #333;
+    color: #5956d6;
 }
 
 .bus-booking {
@@ -68,7 +69,7 @@
     flex-direction: column;
     align-items: center;
     font-size: 20px;
-    color: #333;
+    color: #5956d6;
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 10px;
@@ -76,16 +77,17 @@
 
 .seats-left {
     color: #28a745;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .select-seats {
-    background-color: #dc3545;
+    background-color: #008CBA;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
+    width: calc(100% - 25rem);
 }
 
 .select-seats:hover {

@@ -8,7 +8,9 @@ import NotificationsPage from './pages/NotificationsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ShipmentTrackingPage from './pages/ShipmentTrackingPage';
 import ContactUsPage from './pages/ContactUsPage';
+import BusesPage from './pages/BusesPage';
 import './App.css';
+import SeatLayout from './pages/SeatLayout';
 
 
 function App() {
@@ -16,11 +18,11 @@ function App() {
     <Router>
       <div className="app">
         <Sidebar>
-          <SidebarItem icon={<Home />} text="Home" to="/" />
+          <SidebarItem icon={<Home />} text="Home Page" to="/" />
           {/* <SidebarItem icon={<Settings />} text="Settings" to="/pages/SettingsPage" /> */}
           {/* <SidebarItem icon={<Bell />} text="Notifications" to="/pages/NotificationsPage" alert /> */}
           <SidebarItem icon={<Info />} text="About Us" to="/pages/AboutUsPage" />
-          <SidebarItem icon={<Truck />} text="Shipment Tracking" to="/pages/ShipmentTrackingPage" />
+          <SidebarItem icon={<Truck />} text="Shipments" to="/pages/ShipmentTrackingPage" />
           <SidebarItem icon={<Mail />} text="Contact Us" to="/pages/ContactUsPage" />
         </Sidebar>
         <main className="content">
@@ -42,6 +44,12 @@ function App() {
             </Route>
             <Route path="/pages/ContactUsPage">
               <ContactUsPage />
+            </Route>
+            <Route path="/pages/BusesPage">
+              <BusesPage />
+            </Route>
+            <Route path="/pages/SeatLayout">
+              <SeatLayout />
             </Route>
           </Switch>
         </main>

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const BusesSchema = mongoose.Schema(
+const BusesSchema = new mongoose.Schema(
     {
         busId: {
             type: Number,
-            required: [true, "Enter bus ID" ]
+            required: [true, "Enter bus ID"]
         },
         plateNumber: {
             type: String,
@@ -34,9 +34,7 @@ const BusesSchema = mongoose.Schema(
     {
         timestamps: true,
     }
-
 );
-
 
 const Buses = mongoose.model("Buses", BusesSchema);
 

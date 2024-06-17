@@ -3,14 +3,13 @@ const mongoose = require('mongoose');
 const Buses = require('./models/buses.models');
 const busesRoute = require('./routes/buses.route.js');
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
 
 //routes
-app.use("/api/buses", product.route);
+app.use("/api/buses", busesRoute.route);
 
 
 

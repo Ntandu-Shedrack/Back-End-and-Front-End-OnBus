@@ -4,7 +4,7 @@ import './AboutUsPage.css';
 function AboutUsPage() {
   return (
     <div className='aboutUs'>
-      <h2>About OnBus</h2>
+      <h2><i>About OnBus</i></h2>
       <h4>Overview</h4>
       <p>
       Welcome to OnBus, your ultimate destination for hassle-free bus booking experiences. At OnBus, we're committed to revolutionizing the way you travel by offering convenient, reliable, and affordable bus booking services.
