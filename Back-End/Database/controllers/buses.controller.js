@@ -1,4 +1,4 @@
-const Buses = require('../models/buses.models');
+const Buses = require('../models/buses.model');
 
 const getBuses = async (req, res) => {
     try {
