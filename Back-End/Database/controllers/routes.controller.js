@@ -1,67 +1,67 @@
 const mongoose = require('mongoose');
-const Buses = require('../models/buses.model');
+const Routes = require('../models/routes.model');
 
-const getBuses = async (req, res) => {
+const getRoutes = async (req, res) => {
     try {
-        const buses = await Buses.find({});
-        res.status(200).json(buses);
+        const routes = await Routes.find({});
+        res.status(200).json(routes);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-const getBus = async (req, res) => {
+const getRoute = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ message: 'Invalid ID format' });
         }
-        const bus = await Buses.findById(id);
-        if (!bus) {
+        const route = await Routes.findById(id);
+        if (!route) {
             return res.status(404).json({ message: 'Bus not found' });
         }
-        res.status(200).json(bus);
+        res.status(200).json(route);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-const createBus = async (req, res) => {
+const createRoute = async (req, res) => {
     try {
-        const bus = await Buses.create(req.body);
-        res.status(200).json(bus);
+        const route = await Routes.create(req.body);
+        res.status(200).json(route);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-const updateBus = async (req, res) => {
+const updateRoute = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ message: 'Invalid ID format' });
         }
-        const bus = await Buses.findByIdAndUpdate(id, req.body, { new: true });
+        const route = await Routes.findByIdAndUpdate(id, req.body, { new: true });
 
-        if (!bus) {
+        if (!route) {
             return res.status(404).json({ message: "Bus not found" });
         }
 
-        res.status(200).json(bus);
+        res.status(200).json(route);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-const deleteBus = async (req, res) => {
+const deleteRoute = async (req, res) => {
     try {
         const { id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ message: 'Invalid ID format' });
         }
-        const bus = await Buses.findByIdAndDelete(id);
+        const route = await Routes.findByIdAndDelete(id);
 
-        if (!bus) {
+        if (!route) {
             return res.status(404).json({ message: "Bus not found" });
         }
         res.status(200).json({ message: "Bus deleted successfully" });
@@ -71,9 +71,9 @@ const deleteBus = async (req, res) => {
 };
 
 module.exports = {
-    getBuses,
-    getBus,
-    createBus,
-    updateBus,
-    deleteBus
+    getRoutes,
+    getRoute,
+    createRoute,
+    updateRoute,
+    deleteRoute
 };

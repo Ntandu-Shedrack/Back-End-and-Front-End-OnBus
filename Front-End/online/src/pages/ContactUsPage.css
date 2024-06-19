@@ -3,7 +3,7 @@
     font-size: 20px;
     color: #fff;
 }
-.container {
+.container3 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -11,7 +11,7 @@
     gap: 2rem;
   }
   
-  .sideLeft, .sideRight {
+  .sideLeft3, .sideRight3 {
     flex: 1; 
     height: 100%;
     padding: 2rem;
@@ -22,15 +22,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .sideLeft h2, .sideRight h2 {
+  .sideLeft3 h2, .sideRight3 h2 {
     margin-bottom: 1rem;
   }
   
-  .sideLeft h4, .sideRight h4 {
+  .sideLeft3 h4, .sideRight3 h4 {
     margin-bottom: 0.5rem;
   }
   
-  .sideRight input {
+  .sideRight3 input {
     display: block;
     width: calc(100% - 2rem);
     margin: 1rem 1rem 0 0;
@@ -40,17 +40,17 @@
   }
   
   @media (max-width: 768px) {
-    .container {
+    .container3 {
       flex-direction: column;
     }
     
-    .sideRight input {
+    .sideRight3 input {
       width: calc(100% - 2rem);
       margin: 1rem 0;
     }
   }
   
-  .sideRight textarea, .sideRight button {
+  .sideRight3 textarea, .sideRight3 button {
     display: block;
     width: calc(100% - 2rem);
     margin: 1rem 1rem 0 0;

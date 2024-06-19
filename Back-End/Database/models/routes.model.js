@@ -3,24 +3,21 @@ const Schema = mongoose.Schema;
 
 const mongoosePaginate = require('mongoose-paginate-v2');
 
-const BusesSchema = new Schema(
+const RoutesSchema = new Schema(
     {
-        plateNumber: {
+        routeID: {
             type: String
         },
-        capacity: {
+        origin: {
+            type: String
+        },
+        destination: {
+            type: String
+        },
+        distance: {
             type: Number
         },
-        companyName: {
-            type: String
-        },
-        seatLayout: {
-            type: String
-        },
-        route: {
-            type: String
-        },
-        fare: {
+        duration: {
             type: Number
         }
     },
@@ -29,7 +26,7 @@ const BusesSchema = new Schema(
     }
 );
 
-BusesSchema.plugin(mongoosePaginate);
-const Buses = mongoose.model("Buses", BusesSchema);
+RoutesSchema.plugin(mongoosePaginate);
+const Routes = mongoose.model("Routes", RoutesSchema);
 
-module.exports = Buses;
+module.exports = Routes;

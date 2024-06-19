@@ -4,7 +4,7 @@ import './ContactUsPage.css';
 function Contact() {
 
   return (
-    <div className='container'>
+    <div className='container3'>
       <div className="sideLeft">
       <h2>Get in Touch with Us</h2>
         <table>
@@ -50,7 +50,7 @@ function Contact() {
           </tr>
         </table>
       </div>
-      <div className="sideRight">
+      <div className="sideRight3">
         <form action="" method="post">
           <h2>Send us a Message</h2>
           <input type="text" name="" id="" placeholder='Full Name' />

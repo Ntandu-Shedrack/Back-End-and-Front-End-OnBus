@@ -3,18 +3,18 @@ const router = express.Router();
 const { getBuses, getBus, createBus, updateBus, deleteBus } = require('../controllers/buses.controller');
 
 // Get all buses
-router.get("/api/buses", getBuses);
+router.get("/", getBuses);
 
 // Get single bus by id
-router.get("/api/buses/:id", getBus);
+router.get("/:id", getBus);
 
 // Add new bus
-router.post("/api/buses", createBus);
+router.post("/", createBus);
 
 // Update bus by id
-router.put("/api/buses/:id", updateBus);
+router.put("/:id", updateBus);
 
 // Delete bus by id
-router.delete("/api/buses/:id", deleteBus);
+router.delete("/:id", deleteBus);
 
 module.exports = router;
