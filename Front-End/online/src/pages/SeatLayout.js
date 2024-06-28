@@ -6,121 +6,43 @@ import Checkbox from '@mui/material/Checkbox';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
-// const getAnimalsContent = animals => {
-//     let content = [];
-//     for (let i = 0; i < animals.length; i++) {
-//       const item = animals[i];
-//       content.push(<li key={item.id}>{item.animal}</li>);
-//     }
-//     return content;
-//   };
-
-//   return <ul>{getAnimalsContent(animals)}</ul>;
-
-
 function SeatLayout() {
+
+  const leftSeats = Array(12).fill(null).map(() => Array(2).fill(null));
+  const rightSeats = Array(12).fill(null).map(() => Array(2).fill(null));
+
+
+
     return (
         <div className="seatContainer">
             <div className="left">
                 <div className="leftLeft">
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
+                {leftSeats.map((row, rowIndex) => (
+                        <div key={rowIndex} className="seatRow">
+                            {row.map((seat, seatIndex) => (
+                                <Checkbox
+                                    key={seatIndex}
+                                    {...label}
+                                    icon={<AirlineSeatReclineExtraIcon />}
+                                    checkedIcon={<AirlineSeatReclineExtraIcon />}
+                                />
+                            ))}
+                        </div>
+                    ))}
                 </div>
                 <div className="leftRight">
-                <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
-                    <tr>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                        <td><Checkbox {...label} icon={<AirlineSeatReclineExtraIcon/>} checkedIcon={<AirlineSeatReclineExtraIcon/>} /></td>
-                    </tr>
+                {rightSeats.map((row, rowIndex) => (
+                        <div key={rowIndex} className="seatRow">
+                            {row.map((seat, seatIndex) => (
+                                <Checkbox
+                                    key={seatIndex}
+                                    {...label}
+                                    icon={<AirlineSeatReclineExtraIcon />}
+                                    checkedIcon={<AirlineSeatReclineExtraIcon />}
+                                />
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="right">
@@ -170,26 +92,3 @@ function SeatLayout() {
 
 export default SeatLayout;
 
-
-
-// import * as React from 'react';
-// import Checkbox from '@mui/material/Checkbox';
-// import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-// import Favorite from '@mui/icons-material/Favorite';
-// import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-// import BookmarkIcon from '@mui/icons-material/Bookmark';
-
-// const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-// export default function IconCheckboxes() {
-//   return (
-//     <div>
-//       <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-//       <Checkbox
-//         {...label}
-//         icon={<BookmarkBorderIcon />}
-//         checkedIcon={<BookmarkIcon />}
-//       />
-//     </div>
-//   );
-// }

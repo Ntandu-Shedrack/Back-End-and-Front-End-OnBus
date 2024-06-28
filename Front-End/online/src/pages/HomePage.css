@@ -9,6 +9,7 @@
     align-items: stretch;
     padding: 2rem;
     gap: 2rem;
+    height: fit-content;
   }
   
   .sideLeft, .sideRight {

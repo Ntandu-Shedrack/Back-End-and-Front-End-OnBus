@@ -1,14 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const busesRoute = require('./routes/buses.route.js');
+const cors = require('cors');
 const routesRoute = require('./routes/routes.route.js');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 
 // Routes
 app.use("/api/buses", busesRoute);

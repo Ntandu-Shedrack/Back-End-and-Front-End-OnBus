@@ -22,8 +22,26 @@ const BusesSchema = new Schema(
         },
         fare: {
             type: Number
+        },
+        departureTime: {
+            type: String
+        },
+        arrivalTime: {
+            type: String
+        },
+        seatLeft: {
+            type: String
+        },
+        rating: {
+            type: Number
+        },
+        origin: {
+            type: String
+        },
+        destination: {
+            type: String
         }
-    },
+        },
     {
         timestamps: true,
     }

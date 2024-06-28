@@ -8,6 +8,8 @@ router.get("/", getBuses);
 // Get single bus by id
 router.get("/:id", getBus);
 
+
+
 // Add new bus
 router.post("/", createBus);
 

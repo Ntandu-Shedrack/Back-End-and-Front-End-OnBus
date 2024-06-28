@@ -1,60 +1,63 @@
-import React from 'react';
-import './BusesPage.css';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { BusContext } from '../contexts/BusContext';
 import AirlineSeatReclineNormalOutlinedIcon from '@mui/icons-material/AirlineSeatReclineNormalOutlined';
+import './BusesPage.css';
 
 function BusesPage() {
   const history = useHistory();
+  const { busData } = useContext(BusContext);
 
   const handleClick = (e) => {
     e.preventDefault();
     history.push('/pages/SeatLayout');
-  }
+  };
 
   return (
-    <div className='container'>
-    <div class="bus-card">
-        <div class="bus-info">
-            <div class="bus-details">
-                <h3>BM COACH DSM ARS NO1</h3>
-                <p>Plate No. - T 583 EBL</p>
-                <p class="luxury">2×2 Luxury | <span class="via">VIA BAGAMOYO</span></p>
+    <div className='container8'>
+      {busData.map((bus, index) => (
+        <div className="bus-card" key={index}>
+          <div className="bus-info">
+            <div className="bus-details">
+              <h3 className='companyName'>{bus.companyName}</h3>
+              <p className='plateNumber'>{bus.plateNumber}</p>
+              <p className="seatLayout">{bus.seatLayout}</p>
             </div>
-            <div class="bus-timing">
-                <div class="departure">
-                    <p>03:00 AM</p>
-                </div>
-                <div class="duration">
-                    <p>10 Hrs 00 Min</p>
-                </div>
-                <div class="arrival">
-                    <p>13:00 PM</p>
-                </div>
+            <div className="bus-timing">
+              <div className="departure">
+                <p>{bus.departureTime}</p>
+              </div>
+              <div className="duration">
+                <p>{bus.duration}</p>
+              </div>
+              <div className="arrival">
+                <p>{bus.arrivalTime}</p>
+              </div>
             </div>
+          </div>
+          <div className="bus-booking">
+            <div className="price">
+              <p>TSH. {bus.fare}</p>
+            </div>
+            <div className="seats-left">
+              <AirlineSeatReclineNormalOutlinedIcon />
+              <p>{bus.seatsLeft} Seats Left</p>
+            </div>
+            <button className="select-seats" onClick={handleClick}>Select Seats</button>
+          </div>
+          <div className="bus-footer">
+            <div className="rating">
+              <span className="rating-icon">★</span>
+              <span className="rating-value">{bus.rating}</span>
+            </div>
+            <div className="policy">
+              <p>Booking Policy</p>
+            </div>
+          </div>
         </div>
-        <div class="bus-booking">
-            <div class="price">
-                <p>TSH.</p>
-                <p>50,000</p>
-            </div>
-            <div class="seats-left">
-                <AirlineSeatReclineNormalOutlinedIcon/>
-                <p>49 Seats Left</p>
-            </div>
-            <button class="select-seats" onClick={handleClick}>Select Seats</button>
-        </div>
-        <div class="bus-footer">
-            <div class="rating">
-                <span class="rating-icon">★</span>
-                <span class="rating-value">4.5</span>
-            </div>
-            <div class="policy">
-                <p>Booking Policy</p>
-            </div>
-        </div>
+      ))}
     </div>
-</div>
-  )
+  );
 }
 
 export default BusesPage;

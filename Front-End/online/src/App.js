@@ -11,10 +11,12 @@ import ContactUsPage from './pages/ContactUsPage';
 import BusesPage from './pages/BusesPage';
 import './App.css';
 import SeatLayout from './pages/SeatLayout';
+import { BusProvider } from './contexts/BusContext';
 
 
 function App() {
   return (
+    <BusProvider>
     <Router>
       <div className="app">
         <Sidebar>
@@ -55,6 +57,7 @@ function App() {
         </main>
       </div>
     </Router>
+    </BusProvider>
   );
 }
 

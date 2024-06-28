@@ -8,6 +8,7 @@
 .sideLeft1, .sideRight1 {
   flex: 1;
   padding: 20px;
+  height: fit-content;
   background-color: #f9f9f9;
   border-radius: 16px;
   border: 1px solid #5956d6;
