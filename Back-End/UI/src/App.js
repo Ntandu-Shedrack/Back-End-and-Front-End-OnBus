@@ -1,27 +1,34 @@
 import React from 'react';
 import './App.css';
-import LoginReg from './pages/loginReg';
-import HomePage from './pages/homePage';
-import BusManagement from './pages/busManagement';
-import ShipmentsManagement from './pages/shipmentsManagement';
-import Notification from './pages/Notification';
-import ContactUs from './pages/contactUs';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Sidebar, { SidebarItem } from './Sidebar';
+// import { Home } from 'lucide-react';
+// import HomePage from './pages/HomePage';
+import RegLogin from './pages/RegLogin';
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/login" component={LoginReg} />
-          <Route path="/homePage" component={HomePage} />
-          <Route path="/busManagement" component={BusManagement} />
-          <Route path="/shipmentsManagement" component={ShipmentsManagement} />
-          <Route path="/notifications" component={Notification} />
-          <Route path="/contactUs" component={ContactUs} />
-          <Route path="/" exact component={LoginReg} />
-        </Switch>
-      </Router>
+      {/* <Router>
+      <div className="app">
+        <Sidebar>
+          <SidebarItem icon={<Home />} text="Home Page" to="/pages/HomePage" />
+          
+        </Sidebar>
+        <main className="content">
+          <Switch>
+            <Route exact path="/pages/RegLogin">
+              <RegLogin/>
+            </Route>
+            <Route path="/pages/HomePage">
+              <HomePage />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </Router> */}
+    <RegLogin />
     </div>
   );
 }

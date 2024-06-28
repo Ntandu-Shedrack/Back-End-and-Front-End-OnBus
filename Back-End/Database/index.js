@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const busesRoute = require('./routes/buses.route.js');
 const cors = require('cors');
 const routesRoute = require('./routes/routes.route.js');
+const usersRoute = require('./routes/users.route.js');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -15,7 +16,8 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/buses", busesRoute);
-app.use("/api/routes", routesRoute)
+app.use("/api/routes", routesRoute);
+app.use("/api/users", usersRoute);
 
 app.get('/', (req, res) => {
     res.send('Hello World');
