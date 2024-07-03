@@ -18,9 +18,10 @@ function Home() {
       const response = await fetch(`http://localhost:5000/api/buses?origin=${origin}&destination=${destination}&date=${date}`);
       const data = await response.json();
       setBusData(data);
-      history.push('/pages/BusesPage');
+      history.push('/buses');
     } catch (error) {
-      console.error('Error fetching bus data:', error);
+      alert('Error Searching for buses', error);
+      console.log('Error Searching for buses', error);
     }
   };
 

@@ -1,53 +1,46 @@
-import React from 'react'
+import React from 'react';
 import './ContactUsPage.css';
 
 function Contact() {
-
   return (
     <div className='container3'>
-      <div className="sideLeft">
-      <h2>Get in Touch with Us</h2>
+      <div className="sideLeft3">
+        <h2>Get in Touch with Us</h2>
         <table>
-          <tr>
-            <td>Region:</td>
-            <td>Telephone:</td>
-          <tr>
-            <td></td>
-            <td>Arusha: 06245416517</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Arusha: 06245416517</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Dar es Salaam: 06245416517</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Arusha: 06245416517</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Dodoma: 06245416517</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Morogoro: 06245416517</td>
-          </tr>
-          <tr>
-            <td>.</td>
-            <td>Mbeya: 06245416517</td>
-          </tr>
-          </tr>
-          <tr>
-            <td>Email:</td>
-            <td>info@onbus.com</td>
-          </tr>
-          <tr>
-            <td>Address:</td>
-            <td>Kijitonyama DSM</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Region:</td>
+              <td>Telephone:</td>
+            </tr>
+            <tr>
+              <td>Arusha:</td>
+              <td>06245416517</td>
+            </tr>
+            <tr>
+              <td>Dar es Salaam:</td>
+              <td>06245416517</td>
+            </tr>
+            <tr>
+              <td>Dodoma:</td>
+              <td>06245416517</td>
+            </tr>
+            <tr>
+              <td>Morogoro:</td>
+              <td>06245416517</td>
+            </tr>
+            <tr>
+              <td>Mbeya:</td>
+              <td>06245416517</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>info@onbus.com</td>
+            </tr>
+            <tr>
+              <td>Address:</td>
+              <td>Kijitonyama DSM</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div className="sideRight3">

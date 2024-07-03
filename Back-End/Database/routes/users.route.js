@@ -8,8 +8,6 @@ router.get("/", getUsers);
 // Get single user by id
 router.get("/:id", getUser);
 
-
-
 // Add new user
 router.post("/", createUser);
 

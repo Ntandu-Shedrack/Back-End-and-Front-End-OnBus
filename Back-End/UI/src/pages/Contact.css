@@ -1,0 +1,107 @@
+.welcomeMessage {
+    margin-left: 4rem;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .sideLeft3, .sideRight3 {
+    flex: 1 1 50%; /* Allow flexibility with a larger base width */
+    min-width: 400px; /* Increased minimum width */
+    height: 100%;
+    padding: 3rem; /* Increased padding */
+    background-color: #f9fafb;
+    color: #5956d6;
+    border: 1px solid #5956d6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sideLeft3 h2, .sideRight3 h2 {
+    margin-bottom: 1.5rem; /* Increased margin */
+    font-size: 28px; /* Increased font size */
+  }
+  
+  .sideLeft3 h4, .sideRight3 h4 {
+    margin-bottom: 1rem; /* Increased margin */
+    font-size: 20px; /* Increased font size */
+  }
+  
+  .sideRight3 input {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 1rem; /* Increased padding */
+    border: 1px solid #5956d6;
+    border-radius: 7px;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  @media (max-width: 768px) {
+    .container3 {
+      flex-direction: column;
+    }
+    
+    .sideRight3 input {
+      width: calc(100% - 2rem);
+      margin: 1rem 0;
+    }
+  }
+  
+  .sideRight3 textarea, .sideRight3 button {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem 0 0;
+    padding: 1rem; /* Increased padding */
+    border: 1px solid #5956d6;
+    border-radius: 7px;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  .sideLeft3 h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 20px;
+  }
+  
+  .sideLeft3 table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sideLeft3 td {
+    padding: 15px; /* Increased padding */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sideLeft3 td:first-child {
+    font-weight: bold;
+    padding-right: 20px; /* Increased padding */
+  }
+  
+  .sideLeft3 tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .sideRight3 form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sideLeft3, .sideRight3 {
+      margin-bottom: 20px;
+    }
+  
+    .sideLeft3 {
+      border-right: none;
+    }
+  }
+  

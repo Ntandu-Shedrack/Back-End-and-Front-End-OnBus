@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Sidebar, { SidebarItem } from './Sidebar';
-import { Home, Info, Truck, Mail } from 'lucide-react';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import BackpackIcon from '@mui/icons-material/Backpack';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import NotificationsPage from './pages/NotificationsPage';
@@ -20,37 +23,37 @@ function App() {
     <Router>
       <div className="app">
         <Sidebar>
-          <SidebarItem icon={<Home />} text="Home Page" to="/" />
-          {/* <SidebarItem icon={<Settings />} text="Settings" to="/pages/SettingsPage" /> */}
-          {/* <SidebarItem icon={<Bell />} text="Notifications" to="/pages/NotificationsPage" alert /> */}
-          <SidebarItem icon={<Info />} text="About Us" to="/pages/AboutUsPage" />
-          <SidebarItem icon={<Truck />} text="Shipments" to="/pages/ShipmentTrackingPage" />
-          <SidebarItem icon={<Mail />} text="Contact Us" to="/pages/ContactUsPage" />
+          <SidebarItem icon={<DashboardIcon />} text="Home Page" to="/" />
+          {/* <SidebarItem icon={<Settings />} text="Settings" to="/settings" /> */}
+          {/* <SidebarItem icon={<Bell />} text="Notifications" to="/notifications" alert /> */}
+          <SidebarItem icon={<BackpackIcon />} text="Shipments" to="/shipments" />
+          <SidebarItem icon={<ContactMailIcon />} text="Contact Us" to="/contact" />
+          <SidebarItem icon={<InfoIcon />} text="About Us" to="/about" />
         </Sidebar>
         <main className="content">
           <Switch>
             <Route exact path="/">
               <HomePage />
             </Route>
-            <Route path="/pages/SettingsPage">
+            <Route path="/settings">
               <SettingsPage />
             </Route>
-            <Route path="/page/NotificationsPage">
+            <Route path="/notifications">
               <NotificationsPage />
             </Route>
-            <Route path="/pages/AboutUsPage">
+            <Route path="/about">
               <AboutUsPage />
             </Route>
-            <Route path="/pages/ShipmentTrackingPage">
+            <Route path="/shipments">
               <ShipmentTrackingPage />
             </Route>
-            <Route path="/pages/ContactUsPage">
+            <Route path="/contact">
               <ContactUsPage />
             </Route>
-            <Route path="/pages/BusesPage">
+            <Route path="/buses">
               <BusesPage />
             </Route>
-            <Route path="/pages/SeatLayout">
+            <Route path="/seat">
               <SeatLayout />
             </Route>
           </Switch>

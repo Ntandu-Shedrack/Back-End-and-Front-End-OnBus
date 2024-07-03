@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { BusContext } from '../contexts/BusContext';
 import './ShipmentTrackingPage.css';
 
+
 function ShipmentTrackingPage() {
+
+
+  const history = useHistory();
+  const { setBusData } = useContext(BusContext);
+  const [origin, setOrigin] = useState('');
+  const [destination, setDestination] = useState('');
+  const [date, setDate] = useState('');
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+
+    // Fetch data from the API
+    try {
+      const response = await fetch(`http://localhost:5000/api/buses?origin=${origin}&destination=${destination}&date=${date}`);
+      const data = await response.json();
+      setBusData(data);
+      history.push('/buses');
+    } catch (error) {
+      alert('Error Searching for buses', error);
+      console.log('Error Searching for buses', error);
+    }
+  };
+
+
   return (
     <div className="container1">
       <div className="sideLeft1">
@@ -58,6 +85,10 @@ function ShipmentTrackingPage() {
             <tr>
               <td>Package ID/No:</td>
               <td><input type="number" name="" id="" /></td>
+            </tr>
+            <tr>
+              <td>Bus Plate/No:</td>
+              <td><input type="text" name="" id="" /></td>
             </tr>
             <tr>
               <td><button className='searchBtn' type="reset">Clear</button></td>

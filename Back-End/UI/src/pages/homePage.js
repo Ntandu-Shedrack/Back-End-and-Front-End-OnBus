@@ -1,11 +1,14 @@
 import React from 'react';
 
-function homePage() {
+
+function HomePage() {
   return (
-    <div>
-      
-    </div>
+    <main className="homeContainer">
+      <div className="home">
+        
+      </div>
+    </main>
   )
 }
 
-export default homePage;
+export default HomePage;

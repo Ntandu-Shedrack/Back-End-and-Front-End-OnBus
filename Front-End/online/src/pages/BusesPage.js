@@ -10,7 +10,7 @@ function BusesPage() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    history.push('/pages/SeatLayout');
+    history.push('/seat');
   };
 
   return (
